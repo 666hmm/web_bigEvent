@@ -36,7 +36,24 @@ body {
 
 .layui-input,
 .layui-btn {
-    margin-top: 20px;
     margin-left: 20px;
+    padding-left: 35px;
     width: 90%;
+}
+
+.layui-form-item {
+    position: relative;
+}
+
+#regup,
+#login {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 12px;
+}
+
+.layui-icon {
+    position: absolute;
+    top: 10px;
+    left: 30px;
 }
