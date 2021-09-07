@@ -51,12 +51,17 @@ $(function() {
         $.ajax({
             url: '/api/login',
             method: 'POST',
-            data: $(this).serialize(),
+            data: {
+                username: $('#form_login [name=username]').val(),
+                password: $('#form_login [name=pwd]').val()
+            },
             success: function(res) {
+                console.log(res.message);
                 if (res.status !== 0) {
                     return layer.msg('登陆失败！')
                 }
                 layer.msg('登录成功！')
+                localStorage.setItem('token', res.token)
                 location.href = '/index.html'
             }
         })
