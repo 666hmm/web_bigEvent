@@ -21,6 +21,7 @@ function getUserinfo() {
 }
 // 定义渲染用户图像的函数
 function renderAventor(user) {
+    console.log(user);
     // 渲染名称
     var name = user.nickname || user.username
     $('.welcome').html('欢迎&nbsp&nbsp' + name)
